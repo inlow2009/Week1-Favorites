@@ -1,0 +1,23 @@
+p {
+    color: aquamarine;
+}
+
+h1 {
+    color: indianred;
+}
+
+h2 {
+    color: pink;
+}
+
+body {
+    background-color: black;
+}
+
+ul {
+    color: darkmagenta;
+    outline-width: 10px;
+    outline-color: forestgreen;
+    outline-style: double;
+    margin: auto;
+}
