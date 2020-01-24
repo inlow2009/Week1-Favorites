@@ -1,0 +1,13 @@
+.jumbotron {
+    background: url('Baby1.jpg');
+    color:white;
+    text-shadow: 2px 2px black ;
+  }
+
+  body{
+    font-family: 'Bangers', cursive;
+background-color: rgb(6, 87, 6);
+color: aliceblue;
+text-shadow: 2px 2px black
+  }
+

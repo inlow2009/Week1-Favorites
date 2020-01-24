@@ -5,16 +5,32 @@ p {
 h1 {
     color: indianred;
 }
-
+#page-title{
+    text-shadow: 4px 4px purple;
+}
+.favorite-movie-name{
+    background-color: fuchsia;
+}
 h2 {
     color: pink;
 }
-
+.favorite-section{
+    border: 10px aliceblue dotted;
+    margin: 5px;
+    padding: 5px;
+   
+}
+most-favorite-food{
+    font-style: bold;
+}
 body {
     background-color: black;
 }
-
+#favorite-music-name{
+    color: blue;
+}
 ul {
+    text-decoration: ivory;
     color: darkmagenta;
     outline-width: 10px;
     outline-color: forestgreen;

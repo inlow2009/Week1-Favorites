@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--Header with Title-->
+<head><title>Opinions Matter</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+    <!--Font Style-->
+    <link href="https://fonts.googleapis.com/css?family=Bangers&display=swap" rel="stylesheet">
+    <!--Bootstrap is applied-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!--My CSS Sheet applied-->
+    <link rel="stylesheet" type="text/css" href="Style2.css">
+</head>
+
+<!--Begin Body-->
+<body class="m-3">
+    <div class="jumbotron">
+        <h1>We want to hear your thoughts!</h1>
+    </div>
+
+    <div class="row">
+
+        <!--collum with instructions -->
+        <div class="col-sm-5">
+<p>As one of our students, your thoughts are important to us</p>
+<p>Please use this form to send us your feedback</p>
+<p>If you would like a response, please leave us your contact information</p>
+
+</div>
+        <!--collum with all input-->
+        <div class="col-md-7">
+    <form>
+<label for="namesInput"> Your Full Name:</label>
+<br>
+<input class="form-control" id="namesInput" type="text">
+<br>
+<br>
+<label for="emailInput">Enter your Email:</label>
+<br>
+<input id="emailInput" type="email" class="form-control">
+<br>
+<br>
+<label for="feedbackInput">Please Leave us your feedback!(Required)</label>
+<br>
+<br>
+<textarea class="form-control" id="feedbackInput" required type="text"></textarea>
+<br>
+<br>
+<label for="yesNoRadio">Are you a current student?
+    <br>
+    <br>
+    <div class="form-check">
+    <input id="Yes" name="yesNoRadio" type="radio">
+    <label for="Yes">Yes</label>
+</div>
+<div class="form-check">
+    <input id="No" name="yesNoRadio" type="radio">
+    <label for="No">No</label>
+</div>
+    <br>
+    <br>
+</label>
+<br>
+<input class="btn btn-primary m-2" id="submitButton" type="submit">
+</form>
+</div>
+</div>
+</body>
+</html>
