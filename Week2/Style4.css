@@ -1,0 +1,15 @@
+.jumbotron {
+    background: url('https://www.visittheusa.com/sites/default/files/styles/hero_m_1300x700/public/images/hero_media_image/2016-10/PM_Strip_2014_Cosmo_North_Dusk_260B_Web72DPI.jpg?itok=Ceoa8pWo');
+    border-radius: 8px;
+    color:white;
+    height: 150px;
+    text-shadow: 2px 2px black ;
+  }
+
+  body{
+    font-family: 'Bangers', cursive;
+    background-image: linear-gradient(red, yellow);
+text-shadow: 2px 2px white;
+
+  }
+

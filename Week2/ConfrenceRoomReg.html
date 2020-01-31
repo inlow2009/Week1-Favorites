@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--Header with Title-->
+<head><title>Mommycation Registration</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+    <!--Font Style-->
+    <link href="https://fonts.googleapis.com/css?family=Bangers&display=swap" rel="stylesheet">
+    <!--Bootstrap is applied-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!--My CSS Sheet applied-->
+    <link rel="stylesheet" type="text/css" href="Style4.css">
+</head>
+
+<!--Begin Body-->
+<body class="m-3">
+    <div class="jumbotron">
+        <h1>Come Join Us on Mommycation 2020!</h1>
+    </div>
+
+    <div class="row">
+
+        <!--collum with instructions -->
+        <div class="col-sm-5">
+<p>Join us in Las Vegas for Mommycation!</p>
+<p>Please use this form to register!</p>
+<p>Its only $599 for 5 days!</p>
+
+</div>
+        <!--collum with all input-->
+        <div class="col-md-7">
+    <form>
+<label for="namesInput"> Your Full Name:</label>
+<br>
+<input class="form-control" id="namesInput" type="text" maxlength="70" required>
+<br>
+<br>
+<label for="emailInput">Enter your Email:</label>
+<br>
+<input id="emailInput" type="email" class="form-control" required>
+<br>
+<br>
+<label for="feedbackInput">Special Requests</label>
+<br>
+<br>
+<textarea class="form-control" id="feedbackInput" required type="text"></textarea>
+<br>
+<br>
+<label for="yesNoRadio">Would you like to receive emails from our confrence sponsors?
+    <br>
+    <br>
+    <div class="form-check">
+    <input id="Yes" name="yesNoRadio" type="radio" required>
+    <label for="Yes">Yes</label>
+</div>
+<div class="form-check">
+    <input id="No" name="yesNoRadio" type="radio">
+    <label for="No">No</label>
+</div>
+    <br>
+    <br>
+</label>
+<br>
+<input class="btn btn-primary m-2" id="submitButton" type="submit">
+</form>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+.jumbotron {
+    background: url('https://www.32market.com/images/32m_longlogo.png');
+    color:white;
+    text-shadow: 2px 2px black ;
+  }
+
+  body{
+    font-family: 'Bangers', cursive;
+background-color: limegreen;
+color: blue;
+text-shadow: 2px 2px black
+  }
+
+  #video{
+   
+    align-self: auto;}

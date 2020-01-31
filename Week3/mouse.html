@@ -1,0 +1,35 @@
+  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Mouse</title>
+</head>
+<body>
+
+    <!-- Write your HTML content here -->
+    <p id="mouse-me">Move the mouse over this message</p>
+
+<script>
+
+    // Write your script here
+    let message = document.querySelector('#mouse-me')
+
+    let countMouse = 0 //Make a variable to count the number of mouseover events
+    
+    //Add a mouseover event listner to change the message
+    //when the mouse cursor moves over the paragraph
+    message.addEventListener('mouseover', function() {
+        countMouse = countMouse + 1
+        message.innerHTML = 'Your mouse is on this message ' + countMouse + ' times.'
+    })
+
+    //add a mouseover event listern to change to a differnt
+    //message when the mouse cursor leaves
+    message.addEventListener('mouseout', function(){
+        message.innerHTML = 'Your mouse is NOT on this message'
+    })
+
+</script>
+
+</body>
+</html>

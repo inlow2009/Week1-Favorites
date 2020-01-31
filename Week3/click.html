@@ -1,0 +1,28 @@
+<!DOCTYPE html> 
+    <html lang="en">
+        <head>
+          <title>Button Click</title>
+        </head>
+        <body>
+        <button>Click Here!</button>
+        <button id="otherButton">Click Here too!</button>
+            <!-- Write your HTML content here -->
+        
+        <script>
+        
+            // Write your script here
+            let button = document.querySelector('button')
+            button.addEventListener('click', function() {
+                //write more code
+                alert("You clicked the button!")
+                button.innerHTML ='The button was clicked!'
+            })
+            let anotherButton = document.querySelector('#otherButton')
+            anotherButton.addEventListener('click', function() {          
+                alert("You clicked the other button!")
+                anotherButton.innerHTML = "The Other Button Was Clicked!"
+            })
+        </script>
+        
+        </body>
+    </html>
