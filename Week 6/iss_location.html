@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hello Fetch - Where's the ISS</title>
+
+        <!-- Leadlet script and CSS-->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" />
+        <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
+        
+        <!-- Our Stylesheet. -->
+               <link rel="stylesheet" type="text/css" href="style.css">
+    
+   <!-- defer means wait for page to load - including the leaflet script-->
+    <script async defer src="fetch.js"></script>
+    </head>
+
+    <body>
+        <h1>Where is the International Space Station</h1>
+          <div>
+              <p>On <span id="timeEl"></span> the cordinates of the International Space Station of Awsomeness is: </p>
+              <p>ISS Latitude: <span id="iss-lat"></span></p>
+              <p>ISS Longitude: <span id="iss-long"></span></p>
+          </div>
+          <div id="iss-map"></div>
+    </body>
+</html>
