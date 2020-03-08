@@ -102,6 +102,10 @@
         if(!cityInput){
             errors.push('Please Enter your city')
         }
+     if(!zipInput && zipInput > 55001 && zipInput < 56763) {
+    errors.push('Please enter a zip code between 55001 and 56763')
+    }
+        
         if(!zipInput){
             errors.push('Please Enter your zipcode')
         }
@@ -110,19 +114,10 @@
             alert(errors.join('\n'))
             return
         }
-      
 
-        // TODO Validate the zipcode is in the range 55001 and 56763 (which checks that the zip code is in Minnesota)       
-        
-        // If a form element has not been completed, add an error message to the errors array (use push)
-        // TODO - If there are any errors after checking all of the elements, 
-        // display an alert with all of the error messages (use join)
-        // and then return from this function to prevent further processing 
-
-
-        // TODO - If there are no errors, use a template string to display an order summary in the order summary paragraph
-        let summary = 'A ${treeType} tree will be ordered for ${name} at ${houseNumber} ${streetName}.'
-        orderSummaryParagraph.innerHTML = summary
+     let orderInfo = [name, houseNumber,streetName, treeType, cityInput, zipInput]
+     let orderSummary = orderInfo.join(', ')
+        orderSummaryParagraph.innerHTML = orderSummary
         
     })
 
