@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <title>Shopping Cart</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+        <div id="app">
+               <h2>Item</h2>
+               <h2>Unit Price</h2>
+               <h2>Quantity</h2>
+               <h2>Total</h2>
+
+
+        <button v-on:click="clearNow">Clear</button>
+
+        </div>
+
+    <script>
+        let app = new Vue({
+            el: '#app',
+            data: {
+                name: 'Hat!',
+                quantity: 1,
+                unitPrice: 4.99,
+                
+            },
+            computed: {
+                total: function() {
+                    return this.quantity * this.unitPrice
+                }
+                },
+               
+        })
+    </script>
+
+</body>
+</html>
+
+    

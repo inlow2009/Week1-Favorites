@@ -66,7 +66,7 @@ let studentCount = document.querySelector('student-count')
 
 //event listener for Add Button
 addButtonEl.addEventListener('click', function(){
-    addStudent()
+   
     studentCount = listCount
     console.log(studentCount)
            // validation that makes sure there is something in each box and that the GPA is in a 0 to 4 range
@@ -82,6 +82,7 @@ else if(studentGpaEl.value > 4 || studentGpaEl.value < 0 || studentGpaEl.value =
 alert('Please enter in a G.P.A. between 1-4')
     return
 }
+addStudent()
 })
 
 //event listener for Clear Buttonr
@@ -92,10 +93,11 @@ alert('Please enter in a G.P.A. between 1-4')
      let selected = document.querySelector('.selected')
      selected.parentNode.removeChild(selected)
      updateCount()
-     alert('Clear')
+     
             listCount = studentCount - 1;
 }
-    
+alert('Clear')
+})   
        
  /* Using JavaScript, display 0 in span#student-count
     When button#add-students is clicked

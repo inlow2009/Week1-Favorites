@@ -1,0 +1,13 @@
+Create a Jamacia page - midterm
+
+Shopping list
+5 day weather forcast w/API
+Countdown
+Who's coming list - Checkboxes with pictures that change if checked yes or no
+Pick your drink quiz
+Track My Passport
+Plane Information
+LOTS OF CSS
+What to Wear - Based of off weather
+
+

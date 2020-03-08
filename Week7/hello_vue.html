@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello Vue</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+
+        <div id="app">
+        <h1>Hello Vue</h1>
+        <p>
+            {{ message1 | uppercase }}
+        </p>
+        <p>
+            {{ message.toUpperCase() }}
+        </p>
+        <p>The date is {{another_message}}</p>
+
+        <button v-on:click="addExclamation">Add !</button>
+        <button v-on:click="clearNow">Clear</button>
+
+
+
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+        </head>
+        <body>
+            
+        </body>
+        </html>
+    </div>
+
+    <script>
+        let app = new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello World!',
+                message1: 'Bite Me',
+                another_message: new Date(),
+                count = 1,
+            },
+            methods: {
+                addExclamation: function() {
+                   if (this.count < 11)
+                   this.count++
+                    let characterToAdd = '!'
+                    this.message = this.message + characterToAdd
+                },
+                clearNow: function() {
+                    this.message =  "hi"
+                    this.message = " "
+                },
+                addEventListener.addExclamation: function(click){
+                    count = 
+                }
+            },
+            filters: {
+                uppercase: function(string) {
+                    return string.toUpperCase()
+                }
+            }
+        })
+    </script>
+
+</body>
+</html>
