@@ -1,7 +1,3 @@
-  
-/* Lab: write the code requested by lines marked //TODO
-You should NOT modify any of the code that's here already. Add the code requested.   */
-
 console.log('Lab 4. Please write the code requested at the //TODO markers.')
 
 /* a. Use this JavaScript object. This represents the current position of the International Space Station
@@ -18,8 +14,12 @@ let iss_location = {
   "message": "success"
 };
 
+let latOut = iss_location.iss_position.latitude
+let longOut = iss_location.iss_position.longitude
 
-console.log('The Longitude is: ', longitude, 'and the Latitude is: ', longitude)
+console.log(`Latitude: ${latOut}`)
+console.log(`Longitude: ${longOut}`)
+
 // TODO Extract the latitude value, and log it to the console.
 // TODO Extract the longitude value, and log it to the console.
 
@@ -36,17 +36,24 @@ let rates = {
     "AUD": 1.5417,
     "BGN": 1.9558,
     "BRL": 3.8959,
-    "CAD": 1.5194
-};
+    "CAD": 1.5194,
+    "CHF": 1.1787,
+    };
+
+    let euros = 100
+    let aud = rates.AUD
+    let exchange = euros * aud
+    let highestRates = Math.max(rates.number)
+
+console.log(rates)
+console.log(highestRates)
+console.log(`100 euros exhanged to Austraillian currency is: ${exchange}`)
 
 // TODO write code to add a new property for Swiss Francs. Symbol is CHF, value is 1.1787.
 // TODO if you had 100 Euros, write code to get the exchange rate from the object, then calculate 
 //      the equivalent value in Australian Dollars (AUD)
 // TODO write code to identify the currency symbol that has the highest exchange rate compared to Euros.
 //    In other words, identify the property with the largest value. the answer is BRL (Brazilian Real) at 3.8959 BRL to 1 Euro.
-
-
-
 
 /* c. Use this JavaScript array of objects of cat owners, and their cats. Source, moderncat.com
  */
@@ -55,11 +62,18 @@ let cats_and_owners = [
   { name: "Bill Clinton", cat: "Socks" },
   { name: "Gary Oldman", cat: "Soymilk" },
   { name: "Katy Perry", cat: "Kitty Purry" },
-  { name: "Snoop Dogg", cat: "Miles Davis" }
-];
+  { name: "Snoop Dogg", cat: "Miles Davis" },
+ ];
+cats_and_owners[4] = {name: "Taylor Swift", cat: "Meredith"}
 
-// TODO print Gary Oldman's cat's name
-// TODO Taylor Swift's cat is called 'Meredith'. Write code to add this data to the array.
+let garysCat = cats_and_owners[1].cat
+
+console.log(`Garys cat is: ${garysCat}`) 
+
+cats_and_owners.forEach(function(cats_and_owners){
+    console.log(`${cats_and_owners.name} cat's name is ${cats_and_owners.cat}`)
+})
+
 // TODO write a loop to print each cat owner, and their cat's name, one per line. Use the forEach style.
 
 
@@ -201,15 +215,36 @@ let nobel_prize_winners_2017 = {
     }
   ]
 };
-© 2020 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
+// TODO print the full name of the Literature Nobel laureate.
+let litNobelLaureateNameFirst = nobel_prize_winners_2017.prizes[3].laureates[0].firstname
+let litNobelLaureateNameLast = nobel_prize_winners_2017.prizes[3].laureates[0].surname
+console.log(`And the Literature Nobel Prize goes to: ${litNobelLaureateNameFirst} ${litNobelLaureateNameLast}`)
+
+
+// TODO print the ids of each of the Physics Nobel laureates. Your code should still work without modification if a laureate was added, or removed
+nobel_prize_winners_2017.prizes.forEach(function(element) {
+    if (element.category === "physics"){
+        for( let p in element.laureates)
+        console.log(element.laureates[p].id)
+    }
+})
+// TODO write code to print the names of all of the prize categories (So your output would start physics, chemistry, medicine... ).
+
+// TODO write code to print the total number of prize categories
+// TODO write code to count the total number of laureates from 2017. 
+
+
+count = [];
+nobel_prize_winners_2017.prizes.forEach(function(prizes){
+    count.push(prizes.category)  
+})
+console.log(count.length);
+countLaureates = []
+nobel_prize_winners_2017.prizes.forEach(function(prizes) {
+    prizes.laureates.forEach(laureates)
+    countLaureates.push(laureates.id)
+})
+console.log(countLaureates.length);
+
+
+
