@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <title>Jamaican Retreat</title>
+        <!--set style sheets including boot strap and my own 
+        //Mine is found the the Midterm filters-->
+
+        <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+
+    <!--Font Style-->
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
+    <!--Bootstrap is applied-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!--My CSS Sheet applied-->
+    <link rel="stylesheet" type="text/css" href="Jamacia.css">
+    <!--Adding Vue-->
+    <script src="https://unpkg.com/vue@2.6.7/dist/vue.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    </head>
+
+    <!--Begin Body-->
+     <body class="m-3">
+         <!--Jumbotron with headding -->
+        <div class="jumbotron" id="titlePage">
+       
+        <h1>Jamaican Momcation 2020</h1>
+       
+        </div>
+
+        <div class="row" id="mainContent">
+        <div class="col-sm-5" id="attendance"> 
+            <!--Who's coming list - Checkboxes with pictures that change if checked yes or no-->
+             <div class="card group-List m-2 p-2">
+            <!--create table-->
+            <h4 class="card-title">Roll Call</h4>
+            <div id="group-table">
+                <table class="table">
+                    <tr>
+                        <th>Name</th>
+                        <th>Packed?</th>
+                        <th>Attending?</th>
+                    </tr>
+                    <tr v-for="attendee in attendees">
+                        <td>{{attendee.name}}</td>
+                        <td><input type="checkbox" v-model="attendee.packed"></td>
+                        <td><input type="checkbox" v-model="attendee.attending"></td>
+                    </tr>
+                </table>
+            </div>
+            </div>
+            
+            
+        </div>
+        </div>
+
+        <script>
+
+            <!---The app attendance is started-->
+
+            let app = new Vue({
+                el: "#attendance",
+                data: {
+                    attendees: [ { name: 'Juliana Inlow', packed: false, attending: true},
+                    { name: 'Barbra Olson', packed: false, attending: true},
+                    { name: 'Liberty Picket', packed: false, attending: true},
+                    { name: 'Patrick Ormsby', packed: false, attending: false}
+                    ]
+                },
+               computed: {
+                   sortedArray: function() {
+                       function compare(a, b) {
+                           if (a.name < b.name)
+                           return -1;
+                           if (a.name > b.name)
+                           return 1;
+                           return 0;
+                       }
+                       return this.arrays.sort(compare);
+                   }
+               }
+            }
+            )
+            <!--End the app attendance-->
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+body{
+    font-family: 'Indie Flower', cursive;
+    background-color: black;
+}
+
+#titlePage{
+text-align: center;
+text-shadow: 2px 2px black;
+color: yellow;
+
+}
+
+.jumbotron{
+    background-image: url(panoImg2.jpg);
+    height:300px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border-bottom:1px solid #ff6a00
+  
+}
+
+#mainContent{
+    color: white;
+    background-color: black;
+}
+
+#attendance{
+    border-style: outset;
+    border-width: 1px;
+    border-color: #ff6a00;
+    
+}
+#attendanceHeading{
+    color: #ff6a00;
+
+}
