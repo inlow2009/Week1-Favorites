@@ -34,3 +34,24 @@ color: yellow;
     color: #ff6a00;
 
 }
+
+#forcast{
+    border-style: outset;
+    border-width: 1px;
+    border-color: #ff6a00;
+}
+.column {
+    float: left;
+    width: 50%;
+    flex: 50%;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .row{
+      display: flex;
+  }

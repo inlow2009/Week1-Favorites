@@ -30,8 +30,26 @@
         <h1>Jamaican Momcation 2020</h1>
        
         </div>
+        <div class="col-sm-7" id=thisSide>
+            <div class="row" id="quiz"></div>
+            <button id="submit">Submit Quiz</button>
+            <div id="results"></div>
+            
+
+        </div>
+        <div class="row" id="mainContent1">
+            
+            <!--Begin 5-Day Forcast
+            My goal here is to create a five day forcast and find an API for this and pull it in.         
+            -->
+            <div class="col-sm-5" id="forcast">
+            <h4>Five-Day Forcast</h4>
+            </div>
+        </div>
 
         <div class="row" id="mainContent">
+
+        <!--Begin Attendance Row-->
         <div class="col-sm-5" id="attendance"> 
             <!--Who's coming list - Checkboxes with pictures that change if checked yes or no-->
              <div class="card group-List m-2 p-2">
@@ -52,13 +70,18 @@
                 </table>
             </div>
             </div>
+            <!--End Attendance Row-->
             
-            
+            <!--Begin 5-Day Forcast
+            My goal here is to create a five day forcast and find an API for this and pull it inq         
+            -->
+      
+
         </div>
         </div>
 
         <script>
-
+              
             <!---The app attendance is started-->
 
             let app = new Vue({
@@ -88,4 +111,4 @@
 
         </script>
     </body>
-</html>
+</html> 
