@@ -25,9 +25,7 @@
     <input type="button" id="clear" value="Clear">
   </div>
 
-  document.getElementById('clear').addEventListener('click', function() {
-    context.clearRect(0, 0, canvas.width, canvas.height);
-  }, false);
+
 
 <script>
 
@@ -78,7 +76,12 @@
     context.arc(x-5, y-5, range_value, 0, 2* Math.PI)
     context.stroke();
 
-  
+    // clear it all out
+    document.getElementById('clear').addEventListener('click', function() {
+        context.clearRect(0, 0, canvas.width, canvas.height);
+      }, false);
+
+    </script>
 
 
 </script>
