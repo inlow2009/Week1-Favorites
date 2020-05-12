@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Would you Rather</title>
+    <script src="https://unpkg.com/vue@2.6.7/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+
+        <h1>Would You Rather...</h1>
+        <would-you-rather-question
+         v-bind:question="question"
+         v-bind:answer1="answer1"
+        v-bind:answer2="answer2"
+        ></would-you-rather-question>
+
+    </div>
+
+    <script>
+
+        const WouldYouRatherQuestionComponent = {
+            template: `
+            <div>
+            <h2>{{ question }}</h2>
+
+            <input type="radio" v-model="choice" v-bind:value="answer1">
+            <label>{{ answer1 }}</label>
+            <input type="radio" v-model="choice" v-bind:value="answer2">
+            <label>{{ answer2 }}</label>
+            
+            </div>
+            `,
+            data() {
+                return{
+                    choice: ''
+                }
+            },
+            props: {
+                question: String,
+                answer1: String,
+                answer2: String
+            }
+        }
+
+        let app = new Vue({
+            el: "#app",
+            data() {
+                return {
+                    question: '...be a wizzard or a superhero?',
+                    answer1: 'Superhero',
+                    answer2: 'Wizzard',
+                    userSelectionMessage: ''
+
+                }
+
+            },
+            methods: {
+
+            },
+            components: {
+                'would-you-rather-question': WouldYouRatherQuestionComponent
+            }
+        })
+
+    </script>
+
+</body>
+
+</html>
